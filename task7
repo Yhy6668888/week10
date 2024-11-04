@@ -1,0 +1,50 @@
+public class Circle2 {
+    // 圆形的半径
+    double radius;
+    // 用于记录创建的圆形对象数量
+    private static int numberOfObjects = 0;
+
+    // 无参构造函数，创建半径为1的圆形，并增加对象数量计数
+    public Circle2() {
+        radius = 1;
+        numberOfObjects++;
+    }
+
+    // 有参构造函数，根据指定半径创建圆形，并增加对象数量计数
+    public Circle2(double radius) {
+        this.radius = radius;
+        numberOfObjects++;
+    }
+
+    // 返回创建的圆形对象数量
+    public static int getNumber0fObjects() {
+        return numberOfObjects;
+    }
+
+    // 获取圆形的面积
+    public double getArea() {
+        return radius * radius * Math.PI;
+    }
+}
+public class TestCircleWithStaticMembers {
+    public static void main(String[] args) {
+        // 输出创建对象前的圆形对象数量
+        System.out.println("Before creating objects");
+        System.out.println("The number of Circle2 objects is " + Circle2.getNumber0fObjects());
+
+        // 创建一个圆形对象c1
+        Circle2 c1 = new Circle2();
+        // 输出创建c1后的相关信息
+        System.out.println("\nAfter creating c1");
+        System.out.println("c1: radius= " + c1.radius + " and number of Circle objects= " + Circle2.getNumber0fObjects());
+
+        // 创建一个半径为5的圆形对象c2
+        Circle2 c2 = new Circle2(5);
+        // 修改c1的半径
+        c1.radius = 9;
+        // 输出创建c2并修改c1后的相关信息
+        System.out.println("\nAfter creating c2 and modifying c1");
+        System.out.println("c1: radius=" + c1.radius + " and number of Circle objects=" + Circle2.getNumber0fObjects());
+        System.out.println("c2: radius=" + c2.radius + " and number of Circle objects= " + Circle2.getNumber0fObjects());
+    }
+}
