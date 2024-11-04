@@ -1,0 +1,48 @@
+public class TestSimpleCircle {
+    // 主方法，程序的入口点
+    public static void main(String[] args) {
+        // 创建一个半径为1的圆形对象circle1
+        Circle circle1 = new Circle(); 
+        System.out.println("The area of the circle of radius " +
+                circle1.radius + "is " + circle1.getArea());
+
+        // 创建一个半径为25的圆形对象circle2
+        Circle circle2 = new Circle(25); 
+        System.out.println("The area of the circle of radius " +
+                circle2.radius + " is " + circle2.getArea());
+
+一个半径为125的圆形对象circle3
+        Circle circle3 = new Circle(125); 
+        System.out.println("The area of the circle of radius " +
+                circle3.radius + "is " + circle3.getArea());
+
+        // 修改circle2的半径为100
+        circle2.radius = 100; 
+        System.out.println("The area of the circle of radius " +
+                circle2.radius + " is " + circle2.getArea());
+    }
+}
+public class TestSimpleCircle {
+    // 主方法，程序的入口点
+    public static void main(String[] args) {
+        // 创建一个半径为1的圆形对象circle1
+        Circle circle1 = new Circle(); 
+        System.out.println("The area of the circle of radius " +
+                circle1.radius + "is " + circle1.getArea());
+
+        // 创建一个半径为25的圆形对象circle2
+        Circle circle2 = new Circle(25); 
+        System.out.println("The area of the circle of radius " +
+                circle2.radius + " is " + circle2.getArea());
+
+一个半径为125的圆形对象circle3
+        Circle circle3 = new Circle(125); 
+        System.out.println("The area of the circle of radius " +
+                circle3.radius + "is " + circle3.getArea());
+
+        // 修改circle2的半径为100
+        circle2.radius = 100; 
+        System.out.println("The area of the circle of radius " +
+                circle2.radius + " is " + circle2.getArea());
+    }
+}
