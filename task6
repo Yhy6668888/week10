@@ -1,0 +1,72 @@
+import java.util.Scanner;
+import javafx.geometry.Point2D;
+
+public class ThePoint2D {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter point's x-, y-coordinates: ");
+        double x1 = input.nextDouble();
+        double y1 = input.nextDouble();
+
+        System.out.print("Enter point2's x-, y-coordinates: ");
+        double x2 = input.nextDouble();
+        double y2 = input.nextDouble();
+
+        Point2D p1 = new Point2D(x1, y1);
+        Point2D p2 = new Point2D(x2, y2);
+
+        System.out.println("p1 is " + p1.toString());
+        System.out.println("p2 is " + p2.toString());
+        System.out.println("The distance between p1 and p2 is " + p1.distance(p2));
+        System.out.println("The midpoint between p1 and p2 is " + p1.midpoint(p2).toString());
+    }
+}
+package javafx.geometry;
+
+public class Point2D {
+    // x坐标
+    private double x;
+    // y坐标
+    private double y;
+
+    // 构造函数，根据指定的x和y坐标创建Point2D对象
+    public Point2D(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // 获取该点到指定点(x, y)的距离
+    public double distance(double x, double y) {
+        double dx = this.x - x;
+        double dy = this.y - y;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    // 获取该点到指定Point2D对象p的距离
+    public double distance(Point2D p) {
+        return distance(p.x, p.y);
+    }
+
+    // 获取x坐标
+    public double getX() {
+        return x;
+    }
+
+    // 获取y坐标
+    public double getY() {
+        return y;
+    }
+
+    // 获取该点和指定点p的中点
+    public Point2D midpoint(Point2D p) {
+        double midX = (x + p.x) / 2;
+        double midY = (y + p.y) / 2;
+        return new Point2D(midX, midY);
+    }
+
+    // 返回该点的字符串表示形式
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
+}
