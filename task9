@@ -1,0 +1,46 @@
+class Stock {
+    // 股票代码
+    private String symbol;
+    // 股票名称
+    private String name;
+    // 前一日收盘价
+    private double previousClosingPrice;
+    // 当前价格
+    private double currentPrice;
+
+    // 构造函数，创建一个具有指定股票代码和名称的股票对象
+    public Stock(String symbol, String name) {
+        this.symbol = symbol;
+        this.name = name;
+    }
+
+    // 获取价格变化百分比
+    public double getChangePercent() {
+        return ((currentPrice - previousClosingPrice) / previousClosingPrice) * 100;
+    }
+
+    // 获取股票代码
+    public String getSymbol() {
+        return symbol;
+    }
+
+    // 获取股票名称
+    public String getName() {
+        return name;
+    }
+
+    // 设置当前价格
+    public void setCurrentPrice(double currentPrice) {
+        this.currentPrice = currentPrice;
+    }
+}class StockTest {
+    public static void main(String[] args) {
+        // 创建一个股票对象，股票代码为ORCL，名称为Oracle Corporation，前一日收盘价为34.5
+        Stock stock = new Stock("ORCL", "Oracle Corporation");
+        stock.setCurrentPrice(34.35);
+
+        // 输出股票价格变化百分比
+        System.out.println("Price change percentage: " + stock.getChangePercent() + "%");
+    }
+}
+
