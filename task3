@@ -1,0 +1,75 @@
+public class Circle {
+    // 圆形的半径
+    double radius;
+
+    // 无参构造函数，创建半径为1的圆形
+    public Circle() {
+        radius = 1;
+    }
+
+    // 有参构造函数，根据指定半径创建圆形
+    public Circle(double newRadius) {
+        radius = newRadius;
+    }
+
+    // 获取圆形的面积
+    public double getArea() {
+        return radius * radius * Math.PI;
+    }
+
+    // 获取圆形的周长
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+
+    // 设置圆形的半径
+    public void setRadius(double newRadius) {
+        radius = newRadius;
+    }
+}
+public class Circle {
+    public static void main(String[] args) {
+        // 创建一个半径为1的圆形对象Circle1
+        Circle Circle1 = new Circle();
+        System.out.println("The area of the circle of radius " +
+                Circle1.radius + "is " + Circle1.getArea());
+
+        // 创建一个半径为25的圆形对象Circle2
+        Circle Circle2 = new Circle(25);
+        System.out.println("The area of the circle of radius " +
+                Circle2.radius + " is " + Circle2.getArea());
+
+        // 创建一个半径为75的圆形对象Circle3
+        Circle Circle3 = new Circle(75);
+        System.out.println("The area of the circle of radius " +
+                Circle3.radius + "is " + Circle3.getArea());
+
+        // 改变Circle2的半径为100
+        Circle2.radius = 100;
+        Circle2.setRadius(100);
+        System.out.println("The area of the circle of radius " +
+                Circle2.radius + " is " + Circle2.getArea());
+    }
+    // 圆形的半径
+    double radius;
+    // 无参构造函数，创建半径为1的圆形
+    public Circle() {
+        radius = 1;
+    }
+    // 有参构造函数，根据指定半径创建圆形
+    public Circle(double newRadius) {
+        radius = newRadius;
+    }
+    // 获取圆形的面积
+    public double getArea() {
+        return radius * radius * Math.PI;
+    }
+    // 获取圆形的周长
+    public double getPerimeter() {
+        (略)
+    }
+    // 设置圆形的半径
+    public void setRadius(double newRadius) {
+        radius = newRadius;
+    }
+}
